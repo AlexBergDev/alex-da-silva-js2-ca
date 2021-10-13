@@ -1,4 +1,5 @@
 import displayMessage from "./components/displayMessage.js";
+import { getToken } from "./utils/storage.js";
 import { saveToken, saveUser } from "./utils/storage.js";
 import { baseUrl } from "./settings/api.js";
 import createMenu from "./components/createMenu.js";
@@ -7,6 +8,12 @@ const form = document.querySelector("form");
 const username = document.querySelector("#username");
 const password = document.querySelector("#password");
 const message = document.querySelector(".message-container");
+
+const token = getToken();
+
+if (token) {
+    location.href = "/";
+}
 
 createMenu();
 
@@ -49,7 +56,7 @@ async function executeLogin(username, password) {
             saveToken(json.jwt);
             saveUser(json.user);
 
-           location.href = "/profile.html";
+           location.href = "/index.html";
         }
 
         if (json.error) {
