@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>JavaScript 2 | CA | Admin - Add article</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
+        <link href="css/style.css" rel="stylesheet" />
+        <script src="https://kit.fontawesome.com/1abcb9173a.js" crossorigin="anonymous"></script>
+    </head>
+    <body class="bg-light">
+
+        <header>
+            <div class="navigation"></div>
+        </header>
+
+        <main>
+          <div class="container">
+            <h1 class="display-5 font-weight-normal my-2">Administration</h1>
+            <ul class="nav justify-content-center border-top">
+              <li class="nav-item">
+                <a class="nav-link text-capitalize" href="admin.html"><i class="fas fa-list-ul"></i> Show all</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-capitalize active" aria-current="page" href="#"><i class="fas fa-plus"></i> Add article</a>
+              </li>
+            </ul>
+            <h3 class="display-6 font-weight-normal text-capitalize my-2">Add Article</h3>
+            <form class="mx-auto p-3 my-4 my-lg-5 col-lg-10 p-sm-5 mx-auto bg-white border rounded">
+                <div class="message-container"></div>
+                <div class="mb-3">
+                  <label for="article-title" class="sr-only">Title</label>
+                  <input id="article-title" class="form-control" placeholder="Title" autofocus="">
+                </div>
+                <div class="mb-3">
+                    <label for="article-summary" class="sr-only">Summary</label>
+                    <textarea id="article-summary" class="form-control" placeholder="Summary"></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="article-author" class="sr-only">Author</label>
+                    <input id="article-author" class="form-control" placeholder="Author">
+                </div>
+                <button class="btn btn-primary d-grid gap-2 col-5 mx-auto">Publish</button>
+              </form>
+            </div>
+        </main>
+
+        <footer class="fixed-bottom bg-light p-1">
+            <div class="container text-center">
+              <span class="text-muted">Copyright 2021 random site.</span>
+            </div>
+          </footer>
+
+        <script src="js/add.js" type="module"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-kQtW33rZJAHjgefvhyyzcGF3C5TFyBQBA13V1RKPf4uH+bwyzQxZ6CmMZHmNBEfJ" crossorigin="anonymous"></script>
+    </body>
+</html>
