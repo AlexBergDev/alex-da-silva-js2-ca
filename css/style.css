@@ -7,11 +7,20 @@
   margin: 0px 3px;
 }
 
-.active {
+.active-btn {
   display: none;
 }
 
-@media screen and (max-width: 991px) {
+main .active {
+  color: grey;
+}
+
+main .active:hover {
+  color: grey;
+  cursor: default;
+}
+
+.active-btn @media screen and (max-width: 991px) {
   form {
     padding: 50px 30px;
   }
