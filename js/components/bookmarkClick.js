@@ -12,13 +12,13 @@ export default function bookmarkClick() {
 
     const currentFavs = getBookmarks();
 
-    const productExists = currentFavs.find(function (fav) {
+    const bookmarkExists = currentFavs.find(function (fav) {
         return fav.id === id;
     });
 
-    if (productExists === undefined) {
-        const product = { id: id, title: title, summary: summary, author: author};
-        currentFavs.push(product);
+    if (bookmarkExists === undefined) {
+        const bookmark = { id: id, title: title, summary: summary, author: author};
+        currentFavs.push(bookmark);
         saveBookmarks(currentFavs);
     } else {
         const newFavs = currentFavs.filter((fav) => fav.id !== id);
