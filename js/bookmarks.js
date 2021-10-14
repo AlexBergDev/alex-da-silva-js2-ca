@@ -1,3 +1,4 @@
+import { EMPTY_BOOKMARKS } from "./settings/messages.js"
 import displayMessage from "./components/displayMessage.js";
 import createMenu from "./components/createMenu.js";
 import { getBookmarks } from "./utils/storage.js";
@@ -12,7 +13,7 @@ const container = document.querySelector(".data");
 container.innerHTML = "";
 
 if (bookmarks.length === 0) {
-    displayMessage("alert-info", "No bookmarks yet", ".data");
+    displayMessage("alert-info", EMPTY_BOOKMARKS, ".data");
 }
 
 for (let i = 0; i < bookmarks.length; i++) {
