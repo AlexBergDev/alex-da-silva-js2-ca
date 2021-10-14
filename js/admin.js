@@ -25,7 +25,7 @@ const articleUrl = baseUrl + "articles";
                                         <td>${article.title}</td>
                                         <td>${article.summary}</td>
                                         <td>${article.author}</td>
-                                        <td><a href="edit.html?id=${article.id}"><i class="nav-link fas fa-pen"></i></a></td>
+                                        <td><a href="edit.html?id=${article.id}"><i class="nav-link fs-5 fas fa-pen"></i></a></td>
                                     </tr>`;
         });
     } catch (error) {
