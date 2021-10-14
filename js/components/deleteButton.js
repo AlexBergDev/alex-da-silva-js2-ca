@@ -1,3 +1,4 @@
+import { DELETE_CONFIRM } from "../settings/messages.js"
 import { baseUrl } from "../settings/api.js";
 import { getToken } from "../utils/storage.js";
 
@@ -10,7 +11,7 @@ export default function deleteButton(id) {
 
     button.onclick = async function () {
 
-        const doDelete = confirm("Are you sure? You won't be able to recover the article.");
+        const doDelete = confirm(DELETE_CONFIRM);
 
         if (doDelete) {
             const url = baseUrl + "articles/" + id;
