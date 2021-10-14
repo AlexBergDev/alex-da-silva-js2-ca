@@ -40,3 +40,17 @@ function getFromStorage(key) {
 
     return JSON.parse(value);
 }
+
+export function getBookmarks() {
+    const favs = localStorage.getItem("bookmarks");
+
+    if (favs === null) {
+        return [];
+    } else {
+        return JSON.parse(favs);
+    }
+}
+
+export function saveBookmarks(favs) {
+    localStorage.setItem("bookmarks", JSON.stringify(favs));
+}
