@@ -1,3 +1,4 @@
+import { EMPTY_INPUT_VALUE, SAVED_SUCCESS } from "./settings/messages.js"
 import createMenu from "./components/createMenu.js";
 import redirectUnauthorized from "./components/redirectUnauthorized.js";
 import { baseUrl } from "./settings/api.js";
@@ -56,7 +57,7 @@ function submitForm(event) {
     const idValue = idInput.value;
 
     if (titleValue.length === 0 || summaryValue.length === 0 || authorValue.length === 0) {
-        return displayMessage("alert-warning", "Please fill out all the inputs", ".message-container");
+        return displayMessage("alert-warning", EMPTY_INPUT_VALUE, ".message-container");
     }
 
     updateProduct(titleValue, summaryValue, authorValue, idValue);
@@ -80,7 +81,7 @@ async function updateProduct(title, summary, author, id) {
         const json = await response.json();
 
         if (json.updated_at) {
-            displayMessage("alert-success", "Changes successfully saved", ".message-container");
+            displayMessage("alert-success", SAVED_SUCCESS, ".message-container");
         }
 
         if (json.error) {
