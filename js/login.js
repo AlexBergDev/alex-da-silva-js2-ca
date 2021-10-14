@@ -1,3 +1,4 @@
+import { INVALID_LOGIN_VALUE, WRONG_LOGIN_VALUE } from "./settings/messages.js"
 import displayMessage from "./components/displayMessage.js";
 import { getToken } from "./utils/storage.js";
 import { saveToken, saveUser } from "./utils/storage.js";
@@ -28,7 +29,7 @@ function submitForm(event) {
     const passwordValue = password.value.trim();
 
     if (usernameValue.length === 0 || passwordValue.length === 0) {
-        return displayMessage("alert-warning", "Please enter valid login details", ".message-container");
+        return displayMessage("alert-warning", INVALID_LOGIN_VALUE, ".message-container");
     }
 
     executeLogin(usernameValue, passwordValue);
@@ -60,7 +61,7 @@ async function executeLogin(username, password) {
         }
 
         if (json.error) {
-            displayMessage("alert-danger", "Wrong email address or password", ".message-container");
+            displayMessage("alert-danger", WRONG_LOGIN_VALUE, ".message-container");
         }
     } catch (error) {
         displayMessage("alert-danger", error, ".message-container");
