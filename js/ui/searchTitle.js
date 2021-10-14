@@ -1,4 +1,6 @@
-export default function searchTitle(json, targetElement) {
+import renderArticles from "./renderArticles.js";
+
+export default function searchTitle(json, container) {
 
     const searchTitle = document.querySelector("input#title");
 
@@ -12,7 +14,7 @@ export default function searchTitle(json, targetElement) {
             }
         });
 
-        createArticles(filteredData, targetElement);
+        renderArticles(filteredData, container);
     }
 
     searchTitle.addEventListener("keyup", searchFunction);
