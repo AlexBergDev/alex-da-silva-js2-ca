@@ -25,9 +25,9 @@ const articleUrl = baseUrl + "articles/" + id;
 
         const container = document.querySelector(".article-container");
 
-        container.innerHTML = `<h1>${article.title}</h1>
-                            <p>${article.summary}</p>
-                            <p>${article.author}</p>`;
+        container.innerHTML = `<h1 class="display-5 font-weight-normal my-2 py-2 border-bottom">${article.title}</h1>
+                            <p class="lead font-weight-normal">${article.summary}</p>
+                            <p class="fw-bold fst-italic">${article.author}</p>`;
     } catch (error) {
         displayMessage("alert-warning", error, ".article-container");
     }
