@@ -1,3 +1,4 @@
+import { EMPTY_INPUT_VALUE, ARTICLE_PUBLISHED, STANDARD_ERROR } from "./settings/messages.js"
 import createMenu from "./components/createMenu.js";
 import redirectUnauthorized from "./components/redirectUnauthorized.js";
 import displayMessage from "./components/displayMessage.js";
@@ -26,10 +27,8 @@ function submitForm(event) {
     const summaryValue = summary.value.trim();
     const authorValue = author.value.trim();
 
-    console.log("titleValue", titleValue);
-
     if (titleValue.length === 0 || summaryValue.length === 0 || authorValue.length === 0) {
-        return displayMessage("alert-warning", "Please fill out all the inputs", ".message-container");
+        return displayMessage("alert-warning", EMPTY_INPUT_VALUE, ".message-container");
     }
 
     addProduct(titleValue, summaryValue, authorValue);
@@ -54,7 +53,7 @@ async function addProduct(title, summary, author) {
         const json = await response.json();
 
         if (json.created_at) {
-            displayMessage("alert-success", "Article published", ".message-container");
+            displayMessage("alert-success", ARTICLE_PUBLISHED, ".message-container");
             form.reset();
         }
 
@@ -64,6 +63,6 @@ async function addProduct(title, summary, author) {
 
     } catch (error) {
 
-        displayMessage("alert-danger", "An error occured", ".message-container");
+        displayMessage("alert-danger", STANDARD_ERROR, ".message-container");
     }
 }
