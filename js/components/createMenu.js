@@ -14,7 +14,7 @@ export default function createMenu() {
                                 <a class="nav-link ${pathname === "/" ? "active" : ""}" href="/">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link ${pathname === "/favourites.html" ? "active" : ""}" href="favourites.html">Favourites</a>
+                                <a class="nav-link ${pathname === "/bookmarks.html" ? "active" : ""}" href="bookmarks.html">Bookmarks</a>
                             </li>
                         </ul>
                         <div class="d-flex">
@@ -29,7 +29,7 @@ export default function createMenu() {
                                 <a class="nav-link ${pathname === "/" ? "active" : ""}" href="/">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link ${pathname === "/favourites.html" ? "active" : ""}" href="favourites.html">Favourites</a>
+                                <a class="nav-link ${pathname === "/bookmarks.html" ? "active" : ""}" href="bookmarks.html">Bookmarks</a>
                             </li>
                         </ul>
                         <div class="d-flex">
