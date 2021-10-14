@@ -22,8 +22,9 @@ main .active:hover {
 
 .card i:hover {
   cursor: pointer;
+}
 
-.active-btn @media screen and (max-width: 991px) {
+@media screen and (max-width: 991px) {
   form {
     padding: 50px 30px;
   }
