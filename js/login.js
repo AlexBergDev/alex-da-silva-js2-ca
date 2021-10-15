@@ -1,4 +1,4 @@
-import { INVALID_LOGIN_VALUE, WRONG_LOGIN_VALUE } from "./settings/messages.js"
+import { INVALID_LOGIN_VALUE, WRONG_LOGIN_VALUE } from "./constants/messages.js"
 import displayMessage from "./components/displayMessage.js";
 import { getToken } from "./utils/storage.js";
 import { saveToken, saveUser } from "./utils/storage.js";
