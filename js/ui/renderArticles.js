@@ -1,4 +1,4 @@
-import { EMPTY_ARTICLES } from "../settings/messages.js"
+import { EMPTY_ARTICLES } from "../constants/messages.js"
 import displayMessage from "../components/displayMessage.js";
 import bookmarkClick from "../components/bookmarkClick.js";
 import { getBookmarks } from "../utils/storage.js";
