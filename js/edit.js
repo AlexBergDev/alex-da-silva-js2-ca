@@ -1,4 +1,4 @@
-import { EMPTY_INPUT_VALUE, SAVED_SUCCESS } from "./settings/messages.js"
+import { EMPTY_INPUT_VALUE, SAVED_SUCCESS } from "./constants/messages.js"
 import createMenu from "./components/createMenu.js";
 import redirectUnauthorized from "./components/redirectUnauthorized.js";
 import { baseUrl } from "./settings/api.js";
