@@ -1,4 +1,4 @@
-import { EMPTY_INPUT_VALUE, ARTICLE_PUBLISHED, STANDARD_ERROR } from "./settings/messages.js"
+import { EMPTY_INPUT_VALUE, ARTICLE_PUBLISHED, STANDARD_ERROR } from "./constants/messages.js"
 import createMenu from "./components/createMenu.js";
 import redirectUnauthorized from "./components/redirectUnauthorized.js";
 import displayMessage from "./components/displayMessage.js";
